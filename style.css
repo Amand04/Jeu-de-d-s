@@ -2,8 +2,8 @@ body {
   margin: 0;
   width: auto;
   height: auto;
-  background-image: url(images/background3.jpg);
-  background-size: auto;
+  background-image: url(images/background2.jpg);
+  background-size: contain;
   overflow-x: auto;
 }
 .new__game {
