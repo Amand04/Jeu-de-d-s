@@ -13,7 +13,7 @@ body {
 .new__game--button {
   width: 140px;
   height: 50px;
-  margin: 0px;
+  margin: 10px;
   border: 0;
   padding: 0 20px;
   font-family: "Lato", sans-serif;
@@ -37,9 +37,9 @@ body {
 /*CARD 1*/
 .card1 {
   width: auto;
-  height: 20vh;
+  height: 30vh;
   margin-left: 18px;
-  margin-top: 0px;
+  margin-top: 2px;
   margin-right: 15px;
   background-color: black;
   border: solid 3px red;
@@ -52,10 +52,10 @@ body {
 }
 /*CARD 2*/
 .card2 {
-  height: 20vh;
+  height: 30vh;
   width: auto;
   margin-left: 15px;
-  margin-top: 10px;
+  margin-top: 2px;
   margin-right: 18px;
   background-color: black;
   border: solid 3px red;
@@ -65,6 +65,10 @@ body {
   text-align: left;
   font-size: 20px;
   font-weight: bold;
+}
+/*PLAYER*/
+.player {
+  margin: 15px;
 }
 /*SCORE*/
 .score {
@@ -78,6 +82,7 @@ body {
   color: white;
   text-align: right;
   font-size: 40px;
+  margin-top: 40px;
   margin-right: 35px;
 }
 /*ROLL THE DICE BUTTON*/
@@ -157,6 +162,7 @@ body {
     justify-content: center;
     margin-top: 60px;
   }
+
   .card1 {
     width: 80vw;
     height: auto;
@@ -164,6 +170,12 @@ body {
   .card2 {
     width: 80%;
     height: 60vh;
+  }
+  .score {
+    margin: 40px;
+  }
+  .score__global {
+    margin-top: 180px;
   }
   .hold__button {
     margin: 45px;
