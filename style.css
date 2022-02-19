@@ -6,7 +6,7 @@ body {
   background-size: contain;
   overflow-x: auto;
 }
-/*NEW GMAE BUTTON*/
+/*NEW GAME BUTTON*/
 .new__game {
   text-align: center;
 }
@@ -162,7 +162,6 @@ body {
     justify-content: center;
     margin-top: 60px;
   }
-
   .card1 {
     width: 80vw;
     height: auto;
