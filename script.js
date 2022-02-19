@@ -1,10 +1,12 @@
 let randomNumber;
-let score1;
+let score;
 let score2;
 let globalScore1;
 let playerOn = "player1";
-let scoreText;
-let globalText;
+let scoreText1;
+let globalText1;
+let scoreText2;
+let globalText2;
 
 /*INITIALISATION*/
 let newGame = () => {
@@ -15,15 +17,18 @@ let newGame = () => {
 };
 document.getElementById("buttonNewGame").addEventListener("click", newGame);
 newGame();
-
 /*ROLL BUTTON/AFFICHAGE SCORE AND DICE IMAGE*/
 let Dice = () => {
   randomNumber = Math.floor(Math.random() * 6) + 1;
   document
     .getElementById("diceNumber")
     .setAttribute("src", "images/face_dice--" + randomNumber + ".png");
-
-  document.getElementById("score1").innerHTML = randomNumber;
+  if (playerOn === "player1") {
+    document.getElementById("score1").textContent = randomNumber;
+  }
+  if (playerOn === "player2") {
+    document.getElementById("score2").textContent = randomNumber;
+  }
   if (randomNumber === 1) {
     document.getElementById("score1").textContent = 0;
     alert("Vous avez fait 1! Passez votre tour!");
@@ -46,18 +51,19 @@ function switchPlayer() {
   switch (playerOn) {
     case "player1": {
       console.log("1");
-      scoreText = document.getElementById("score1");
-      globalText = document.getElementById("globalScore1");
-      score = score1;
-      global = globalScore1;
+      scoreText1 = document.getElementById("score1");
+      globalText1 = document.getElementById("globalScore1");
+
+      document.getElementById("score2").textContent = 0;
       break;
     }
     case "player2": {
       console.log("2");
-      scoreText = document.getElementById("score2");
-      globalText = document.getElementById("globalScore2");
-      score = score2;
+      scoreText2 = document.getElementById("score2");
+      globalText2 = document.getElementById("globalScore2");
+
       global = globalScore2;
+      document.getElementById("score1").textContent = 0;
       break;
     }
     default: {
@@ -65,21 +71,26 @@ function switchPlayer() {
     }
   }
 }
-scoreText = document.getElementById("score1").textContent;
-globalText = document.getElementById("globalScore1").textContent;
-scoreText = document.getElementById("score2").textContent;
-globalText = document.getElementById("globalScore2").textContent;
-let score = document.getElementById("score1").textContent;
+let global1;
+scoreText1 = document.getElementById("score1");
+globalText1 = document.getElementById("globalScore1").textContent;
+scoreText2 = document.getElementById("score2").textContent;
+globalText2 = document.getElementById("globalScore2").textContent;
+
 let global = document.getElementById("globalScore1");
 /*HOLD BUTTON*/
 let Hold = () => {
-  {
-    score.textContent = randomNumber;
-    global.textContent += score;
-
-    console.log("alert");
+  if (playerOn === "player1") {
+    globalText1 += scoreText1 = global1;
+    document.getElementById("globalScore1").innerText = parseInt(global1);
   }
-
+  if (playerOn === "player2") {
+    document.getElementById("globalScore2").textContent +=
+      document.getElementById("score2").textContent;
+  }
+  console.log("alert");
   switchPlayer();
 };
 document.getElementById("hold").addEventListener("click", Hold);
+/*global += score;
+    globalText += global;*/
