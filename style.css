@@ -1,3 +1,4 @@
+/*BODY*/
 body {
   margin: 0;
   width: auto;
@@ -21,7 +22,7 @@ body {
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 1px #000;
-  background-color: #ffbbbb;
+  background-color: #ffa1c9;
   background-image: linear-gradient(
     to top left,
     rgba(0, 0, 0, 0.2),
@@ -33,6 +34,7 @@ body {
   border-color: rgb(87, 2, 2);
   border-style: groove;
   border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
 }
 
 /*CARD 1*/
@@ -48,10 +50,13 @@ body {
   border: solid 15px #ffe4c0;
   border-radius: 10px;
   font-family: "Lato", sans-serif;
-  color: black;
+  color: white;
+  text-shadow: 0em 0.1em 0.2em black;
+  box-shadow: 0em 0.1em 0.3em rgba(0, 0, 0, 0.6);
   text-align: left;
   font-size: 20px;
   font-weight: bold;
+  filter: drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, 0.596));
 }
 /*CARD 2*/
 .card2 {
@@ -60,16 +65,19 @@ body {
   height: 20vh;
   width: auto;
   margin-left: 15px;
-  margin-top: 2px;
+  margin-top: 10px;
   margin-right: 18px;
   background-color: #bffff0;
   border: solid 15px #ffe4c0;
   border-radius: 10px;
   font-family: "Lato", sans-serif;
-  color: black;
+  color: white;
+  text-shadow: 0em 0.1em 0.2em black;
+  box-shadow: 0em 0.1em 0.3em rgba(0, 0, 0, 0.6);
   text-align: left;
   font-size: 20px;
   font-weight: bold;
+  filter: drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, 0.596));
 }
 
 /*PLAYER TEXT*/
@@ -80,35 +88,37 @@ body {
 .player__image1 {
   width: 90px;
   border-radius: 50%;
+  filter: drop-shadow(0em 0.2em 0.2em black);
 }
 /*PLAYER IMAGE2*/
 .player__image2 {
   width: 90px;
   border-radius: 50%;
+  filter: drop-shadow(0em 0.2em 0.2em black);
 }
 
-/*SCORE*/
+/*SCORE1*/
 .score__1 {
   margin: 4px;
   font-size: 30px;
-  color: black;
+  color: white;
 }
-/*GLOBAL SCORE*/
+/*GLOBAL SCORE1*/
 .score__global1 {
   margin-top: 80px;
-  color: black;
+  color: white;
   font-size: 40px;
 }
-/*SCORE*/
+/*SCORE2*/
 .score__2 {
   margin: 4px;
   font-size: 30px;
-  color: black;
+  color: white;
 }
-/*GLOBAL SCORE*/
+/*GLOBAL SCORE2*/
 .score__global2 {
   margin-top: 80px;
-  color: black;
+  color: white;
   font-size: 40px;
 }
 /*ROLL THE DICE BUTTON*/
@@ -116,7 +126,7 @@ body {
   width: 140px;
   height: 50px;
   padding: 0 20px;
-  margin: 10px;
+  margin: 5px;
   border: 0;
   text-align: center;
   font-size: 20px;
@@ -124,30 +134,54 @@ body {
   color: white;
   font-family: "Lato", sans-serif;
   text-shadow: 1px 1px 1px #000;
-  background-color: #ffbbbb;
+  background-color: #ff008e;
   background-image: linear-gradient(
     to top left,
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2) 30%,
     rgba(0, 0, 0, 0)
   );
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.938),
     inset -2px -2px 3px rgba(0, 0, 0, 0.6);
   border-color: rgb(87, 2, 2);
   border-style: groove;
   border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
+  animation: 1s linear 1s infinite alternate up;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(0px) rotate(-4deg);
+  }
+
+  to {
+    transform: translateY(0px) rotate(4deg);
+  }
 }
 .dice__roll {
   text-align: center;
 }
-/*DICE*/
+/*DICE AND ANIMATION*/
 .dice__image {
   width: 70px;
   height: 70px;
-  margin: 10px;
-  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 5px;
+  text-align: left;
+  animation: 3s linear 2s infinite alternate bounce;
 }
-/*HOLD BUTTON*/
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px) rotate(0);
+  }
+
+  to {
+    transform: translateY(0px) rotate(180deg);
+  }
+}
+/*HOLD BUTTON AND ANIMATION*/
 .hold {
   text-align: center;
 }
@@ -155,14 +189,14 @@ body {
   width: 140px;
   height: 50px;
   padding: 0 20px;
-  margin: 10px;
+  margin: 6px;
   border: 0;
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-shadow: 1px 1px 1px #000;
-  background-color: #ffbbbb;
+  background-color: #ffa1c9;
   background-image: linear-gradient(
     to top left,
     rgba(0, 0, 0, 0.2),
@@ -174,10 +208,11 @@ body {
   border-color: rgb(87, 2, 2);
   border-style: groove;
   border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
 }
 
 /*RESPONSIVE*/
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .new__game {
     margin: 40px;
   }
@@ -186,24 +221,54 @@ body {
   }
   .cards__players {
     display: flex;
-    justify-content: center;
-    margin-top: 60px;
   }
   .card1 {
-    width: 80vw;
+    display: block;
+    text-align: center;
+    width: 80%;
     height: auto;
   }
   .card2 {
+    display: block;
+    text-align: center;
     width: 80%;
-    height: 60vh;
+    height: auto;
   }
-  .score {
-    margin: 40px;
+  .player__image1 {
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .score__global {
+  .player__image2 {
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .score__1 {
+    margin: 90px;
+  }
+  .score__2 {
+    margin: 90px;
+  }
+  .score__global1 {
     margin-top: 40px;
+  }
+  .score__global2 {
+    margin-top: 40px;
+  }
+  .dice__image {
+    margin: 40px;
   }
   .hold__button {
     margin: 45px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .card1 {
+    height: 580px;
+    font-size: 35px;
+  }
+  .card2 {
+    font-size: 35px;
   }
 }
