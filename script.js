@@ -10,6 +10,7 @@ let border2 = document.getElementById("card2");
 /*ROLL BUTTON/AFFICHAGE SCORE AND DICE IMAGE*/
 let Dice = () => {
   disabledHoldBtn();
+  desactivateAlertNumber1();
   randomNumber = Math.floor(Math.random() * 6) + 1;
   document
     .getElementById("diceNumber")
@@ -22,9 +23,9 @@ let Dice = () => {
   }
   enableBtn();
   if (randomNumber === 1) {
-    document.getElementById("score1").textContent = 0;
-    alert("Vous avez fait 1! Passez votre tour!");
+    alertNumber1();
     switchPlayer();
+    disabledHoldBtn();
   }
 };
 document.getElementById("rollTheDice").addEventListener("click", Dice);
@@ -50,10 +51,19 @@ let switchPlayer = () => {
       document.getElementById("score1").textContent = 0;
       break;
     }
-    default: {
-      console.log("erreur Player");
-    }
+    default:
+      {
+        console.log("erreur Player");
+      }
+      disabledHoldBtn();
   }
+};
+
+let alertNumber1 = () => {
+  document.getElementById("custom-alert-box-button").hidden = false;
+};
+let desactivateAlertNumber1 = () => {
+  document.getElementById("custom-alert-box-button").hidden = true;
 };
 /*DISACTIVATE HOLD BUTTON*/
 let disabledHoldBtn = () => {

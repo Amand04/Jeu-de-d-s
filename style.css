@@ -14,7 +14,7 @@ body {
 .new__game--button {
   width: 140px;
   height: 50px;
-  margin: 10px;
+  margin: 5px;
   border: 0;
   padding: 0 20px;
   font-family: "Lato", sans-serif;
@@ -64,8 +64,8 @@ body {
   justify-content: space-around;
   height: 20vh;
   width: auto;
-  margin-left: 15px;
-  margin-top: 10px;
+  margin-left: 10px;
+  margin-top: 4px;
   margin-right: 18px;
   background-color: #bffff0;
   border: solid 15px #ffe4c0;
@@ -126,7 +126,7 @@ body {
   width: 140px;
   height: 50px;
   padding: 0 20px;
-  margin: 5px;
+  margin-top: 5px;
   border: 0;
   text-align: center;
   font-size: 20px;
@@ -159,28 +159,72 @@ body {
     transform: translateY(0px) rotate(4deg);
   }
 }
-.dice__roll {
+
+.dice__roll--button {
   text-align: center;
 }
 /*DICE AND ANIMATION*/
+.dice__roll {
+  text-align: center;
+}
 .dice__image {
+  margin-top: 18px;
   width: 70px;
   height: 70px;
-  margin-top: 27px;
-  margin-bottom: 5px;
-  text-align: left;
-  animation: 3s linear 2s infinite alternate bounce;
+  animation: 0.8s linear infinite 3s alternate bounce;
 }
 
 @keyframes bounce {
   from {
-    transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(-15deg);
+    transform: translateX(0px) rotate(-10deg);
   }
 
   to {
-    transform: translateY(0px) rotate(180deg);
+    transform: translateY(8px) rotate(15deg);
+    transform: translateX(8px) rotate(10deg);
   }
 }
+/*SCORE=1*/
+.alert__number {
+  text-align: center;
+}
+.alert__number1 {
+  width: 230px;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 5px;
+  border: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  background-color: #ff008e;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.938),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  border-color: rgb(87, 2, 2);
+  border-style: groove;
+  border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
+}
+
+.custom-box {
+  border: 2px solid grey;
+  text-align: center;
+  padding: 10px;
+  width: fit-content;
+  background-color: white;
+  margin: auto;
+}
+
 /*HOLD BUTTON AND ANIMATION*/
 .hold {
   text-align: center;
@@ -214,7 +258,8 @@ body {
 /*RESPONSIVE*/
 @media screen and (min-width: 768px) {
   .new__game {
-    margin: 40px;
+    text-align: center;
+    margin-top: 150px;
   }
   .dice__roll {
     margin-top: 160px;
@@ -225,14 +270,16 @@ body {
   .card1 {
     display: block;
     text-align: center;
-    width: 80%;
+    width: 40%;
     height: auto;
+    margin-left: 75px;
   }
   .card2 {
     display: block;
     text-align: center;
-    width: 80%;
+    width: 40%;
     height: auto;
+    margin-right: 75px;
   }
   .player__image1 {
     width: 110px;
@@ -259,8 +306,11 @@ body {
   .dice__image {
     margin: 40px;
   }
+  .alert__number1 {
+    margin: 15px;
+  }
   .hold__button {
-    margin: 45px;
+    margin-top: 50px;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -269,6 +319,7 @@ body {
     font-size: 35px;
   }
   .card2 {
+    height: 580px;
     font-size: 35px;
   }
 }
