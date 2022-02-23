@@ -185,7 +185,7 @@ body {
     transform: translateX(8px) rotate(10deg);
   }
 }
-/*SCORE=1*/
+/*SCORE=1 ALERT WINDOW*/
 .alert__number {
   text-align: center;
 }

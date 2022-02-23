@@ -1,12 +1,3 @@
-let randomNumber;
-let playerOn = "player1";
-let scoreText1;
-let scoreText2;
-let globalText1;
-let globalText2;
-let border1 = document.getElementById("card1");
-let border2 = document.getElementById("card2");
-
 /*ROLL BUTTON/AFFICHAGE SCORE AND DICE IMAGE*/
 let Dice = () => {
   disabledHoldBtn();
@@ -58,10 +49,12 @@ let switchPlayer = () => {
       disabledHoldBtn();
   }
 };
-
+/*ALERT IF RANDOMNUMBER = 1*/
+/*ACTIVATE*/
 let alertNumber1 = () => {
   document.getElementById("custom-alert-box-button").hidden = false;
 };
+/*DESACTIVATE*/
 let desactivateAlertNumber1 = () => {
   document.getElementById("custom-alert-box-button").hidden = true;
 };
@@ -69,49 +62,32 @@ let desactivateAlertNumber1 = () => {
 let disabledHoldBtn = () => {
   document.getElementById("hold").disabled = true;
 };
+/*ACTIVATE*/
 let enableBtn = () => {
   document.getElementById("hold").disabled = false;
 };
 /*INITIALISATION*/
 let newGame = () => {
   document.location.reload();
-  document.getElementById("score1").textContent = 0;
-  document.getElementById("globalScore1").textContent = 0;
-  document.getElementById("score2").textContent = 0;
-  document.getElementById("globalScore2").textContent = 0;
 };
 document.getElementById("buttonNewGame").addEventListener("click", newGame);
-/*A FINI!!!*/
-let points1 = "score1";
-let total1 = "globalScore1";
-let theScore1 =
-  document.getElementById("score1") + document.getElementById("globalScore1");
-let globalScore2 =
-  document.getElementById("globalScore2") + document.getElementById("score2");
 /*HOLD BUTTON*/
 let Hold = () => {
   if (playerOn === "player1") {
-    document.getElementById("globalScore1").textContent +=
-      document.getElementById("score1").textContent;
+    document.getElementById("globalScore1").textContent += randomNumber;
   }
   if (playerOn === "player2") {
-    document.getElementById("globalScore2").textContent +=
-      document.getElementById("score2").textContent;
+    document.getElementById("globalScore2").textContent += randomNumber;
   }
   disabledHoldBtn();
-  console.log("alert");
   switchPlayer();
 };
 document.getElementById("hold").addEventListener("click", Hold);
-
-/*let finish = document.getElementById("rollTheDice");
-let Winner = () => {
-  if (globalText1 >= 5) {
-    finish.setAttribute("disabled", "true");
-    alert("Le joueur 1 a gagné");
-  }
-  if (globalText2) {
-    finish.setAttribute("disabled", "true");
-    alert("Le joueur 2 a gagné");
-  }
-};*/
+document.getElementById("score1").textContent = 0;
+document.getElementById("globalScore1").textContent = 0;
+document.getElementById("score2").textContent = 0;
+document.getElementById("globalScore2").textContent = 0;
+let randomNumber;
+let playerOn = "player1";
+let border1 = document.getElementById("card1");
+let border2 = document.getElementById("card2");
