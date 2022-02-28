@@ -36,7 +36,6 @@ body {
   border-radius: 13px;
   filter: drop-shadow(0em 0.2em 0.2em black);
 }
-
 /*CARD 1*/
 .card1 {
   display: flex;
@@ -46,7 +45,7 @@ body {
   margin-left: 18px;
   margin-top: 2px;
   margin-right: 15px;
-  background-color: #bffff0;
+  background-color: #9adcff;
   border: solid 15px #ffe4c0;
   border-radius: 10px;
   font-family: "Lato", sans-serif;
@@ -67,7 +66,7 @@ body {
   margin-left: 10px;
   margin-top: 4px;
   margin-right: 18px;
-  background-color: #bffff0;
+  background-color: #9adcff;
   border: solid 15px #ffe4c0;
   border-radius: 10px;
   font-family: "Lato", sans-serif;
@@ -79,7 +78,6 @@ body {
   font-weight: bold;
   filter: drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, 0.596));
 }
-
 /*PLAYER TEXT*/
 .player {
   margin-top: 10px;
@@ -96,10 +94,9 @@ body {
   border-radius: 50%;
   filter: drop-shadow(0em 0.2em 0.2em black);
 }
-
 /*SCORE1*/
 .score__1 {
-  margin: 4px;
+  margin-left: 30px;
   font-size: 30px;
   color: white;
 }
@@ -111,7 +108,7 @@ body {
 }
 /*SCORE2*/
 .score__2 {
-  margin: 4px;
+  margin-left: 30px;
   font-size: 30px;
   color: white;
 }
@@ -147,23 +144,25 @@ body {
   border-style: groove;
   border-radius: 13px;
   filter: drop-shadow(0em 0.2em 0.2em black);
-  animation: 1s linear 1s infinite alternate up;
+  animation: 1s linear 1s infinite alternate up; /*ANIMATION*/
 }
-
 @keyframes up {
   from {
     transform: translateY(0px) rotate(-4deg);
   }
-
   to {
     transform: translateY(0px) rotate(4deg);
   }
 }
-
+.roll__the_dice--button--icon {
+  text-align: center;
+  width: 50px;
+  height: 40px;
+}
 .dice__roll--button {
   text-align: center;
 }
-/*DICE AND ANIMATION*/
+/*ROLL THE DICE AND ANIMATION*/
 .dice__roll {
   text-align: center;
 }
@@ -171,9 +170,8 @@ body {
   margin-top: 18px;
   width: 70px;
   height: 70px;
-  animation: 0.8s linear infinite 3s alternate bounce;
+  animation: 0.8s linear infinite 3s alternate bounce; /*ANIMATION*/
 }
-
 @keyframes bounce {
   from {
     transform: translateY(0px) rotate(-15deg);
@@ -215,17 +213,85 @@ body {
   border-radius: 13px;
   filter: drop-shadow(0em 0.2em 0.2em black);
 }
-
-.custom-box {
-  border: 2px solid grey;
+/*WINNER ALERT*/
+.alert__winner {
   text-align: center;
-  padding: 10px;
-  width: fit-content;
-  background-color: white;
-  margin: auto;
 }
+/*WINNER ALERT1*/
+.alert__winner1 {
+  width: 230px;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 5px;
+  border: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  background-color: #ff008e;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.938),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  border-color: rgb(87, 2, 2);
+  border-style: groove;
+  border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
+  animation: linear 1s alternate winner; /*ANIMATION*/
+}
+@keyframes winner {
+  from {
+    transform: translateY(0px) rotate(0deg);
+  }
 
-/*HOLD BUTTON AND ANIMATION*/
+  to {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+/*WINNER ALERT2*/
+.alert__winner2 {
+  width: 230px;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 5px;
+  border: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  background-color: #ff008e;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.938),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  border-color: rgb(87, 2, 2);
+  border-style: groove;
+  border-radius: 13px;
+  filter: drop-shadow(0em 0.2em 0.2em black);
+  animation: linear 1s alternate winner; /*ANIMATION*/
+}
+@keyframes winner {
+  from {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+/*HOLD BUTTON*/
 .hold {
   text-align: center;
 }
@@ -254,12 +320,15 @@ body {
   border-radius: 13px;
   filter: drop-shadow(0em 0.2em 0.2em black);
 }
-
+.hold__button--icon {
+  width: 40px;
+  height: 40px;
+}
 /*RESPONSIVE*/
 @media screen and (min-width: 768px) {
   .new__game {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 110px;
   }
   .dice__roll {
     margin-top: 160px;
@@ -307,7 +376,19 @@ body {
     margin: 40px;
   }
   .alert__number1 {
-    margin: 15px;
+    margin-top: 15px;
+    width: 140px;
+    height: 65px;
+  }
+  .alert__winner1 {
+    margin-top: 20px;
+    width: 140px;
+    height: 80px;
+  }
+  .alert__winner2 {
+    margin-top: 20px;
+    width: 140px;
+    height: 80px;
   }
   .hold__button {
     margin-top: 50px;

@@ -11,28 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="new__game">
-        <button class="new__game--button" id="buttonNewGame" type="button">New Game</button>
-      </div>
+      <div class="new__game"><button class="new__game--button" id="buttonNewGame" type="button">GO!</button></div>
     <section class="cards__players">
       <article class="card1" id="card1"></a>
         <p><img src="images/player1.jfif" alt="image du personnage 1" class="player__image1" id="image1"></p>
         <p class="player" id="player1">Player1</p>
-      <div><p class="score__1" id="score1" value=""></p></div>
-        <p class="score__global1" id="globalScore1"value=""></p></article>
+        <div><p class="score__1" id="score1"></p></div>
+        <p class="score__global1" id="globalScore1"></p></article>
       <article>
-      <div class="dice__roll">
+        <div class="dice__roll">
         <img class="dice__image" src="images\face_dice--6.png"id="diceNumber" alt="image du dé correspondant au chiffre obtenu"></div>
-      <div class="dice__roll--button"><button class="roll__the--dice--button" id="rollTheDice" type="button">Play</button></div>
-      <div class="alert__number"><button class="alert__number1" id="custom-alert-box-button" hidden>Pass on a turn!</button></div>
-      <div class="hold">
-        <button class="hold__button"id="hold"type="button">Save</button></div>
+        <div class="dice__roll--button"><button class="roll__the--dice--button" id="rollTheDice" type="button"><img src="images\roll_icon.png" alt="image vectorielle de lecture utilisé pour lancer le dé" class="roll__the_dice--button--icon"></button></div>
+
+        <div class="alert__number"><button class="alert__number1" id="alert__number1" hidden>1 Next Player!</button></div>
+
+        <div class="alert__winner"><button class="alert__winner1" id="alert__winner1" hidden>Player 1 wins!</button></div>
+        <div class="alert__winner"><button class="alert__winner2" id="alert__winner2" hidden>Player 2 wins!</button></div>
+        <div class="hold"><button class="hold__button"id="hold"type="button"><img src="images\add_icon2-removebg-preview.png" alt="image vectorielle d'un signe plus pour ajouter le score au total" class="hold__button--icon"></button></div>
       </article>
       <article class="card2" id="card2">
         <p><img src="images/player2.jfif" alt="image du personnage 2" class="player__image2" id="image2"></p>
         <p class="player"id = "player2">Player2</p>
         <p class="score__2" id="score2"></p>
-        <p class="score__global2" id="globalScore2" value=""></p></article>
+        <p class="score__global2" id="globalScore2"></p></article>
     </section>
     <script src="script.js"></script>
   </body>
